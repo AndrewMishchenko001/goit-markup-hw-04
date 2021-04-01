@@ -207,6 +207,15 @@ body {
   font-size: 14px;
   line-height: 1.71;
 }
+.feature-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background-color: var(--background-button);
+  margin-bottom: 30px;
+}
 
 /* Section */
 .section {
@@ -287,7 +296,13 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
+.team-icon {
+  width: 20px;
+  height: 20px;
+}
+.team-link {
+  display: block;
+}
 /* buttons */
 .button {
   color: var(--title-text-color);
