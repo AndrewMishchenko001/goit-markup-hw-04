@@ -10,8 +10,10 @@
   --background-gray: #e5e5e5;
   --bordercard-grey: #eeeeee;
   --transparent-mail: rgba(255 255 255 0.6);
-
-  --card-set-gep: 30px;
+  --gradient-color: #c4c4c4
+  
+ --card-set-gep: 30px;
+ 
 }
 
 /* Cтили для Index.html */
@@ -122,14 +124,21 @@ body {
 .auth-nav {
   display: flex;
   margin-left: auto;
+  align-items: center;
 }
 
 .auth-nav .item + .item {
   margin-left: 50px;
 }
+.auth-item {
+  margin-right: 10px;
+}
 
 .auth-nav .link {
-  display: block;
+  display: flex;
+  align-items: center;
+
+  fill: currentColor;
 
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
@@ -147,6 +156,10 @@ body {
 /* Hero */
 .hero-section {
   background-color: var(--background-black);
+
+  background-image:linear-gradient(to right,rgba(47, 48, 58, .2) 0%,rgba(45, 45, 45, .4) 100%), url(/images/img_5.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
   max-width: 1600px;
   height: 600px;
@@ -186,7 +199,6 @@ body {
 .feature-list .item + .item {
   margin-left: 30px;
 }
-
 .features-title {
   margin-top: 0;
   margin-bottom: 10px;
@@ -198,7 +210,6 @@ body {
   line-height: 1.14;
   text-transform: uppercase;
 }
-
 .features-text {
   margin-top: 0;
   margin-bottom: 0px;
@@ -311,6 +322,7 @@ body {
   fill: currentColor;
   color: #afb1b8;
 }
+.team-link:focus,
 .team-link:hover {
   background-color: var(--accent-color);
   color: var(--white-color);
@@ -333,7 +345,6 @@ body {
 
 /* Clients */
 
-}
 .client-link {
   width: 170px;
   height: 92px;
@@ -345,7 +356,14 @@ body {
   fill: currentColor;
   color: #afb1b8;
 }
-
+.client-link:focus,
+.client-link:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+.client-item-icon + .client-item-icon {
+  margin-left: 30px;
+}
 /* buttons */
 .button {
   color: var(--title-text-color);
@@ -387,18 +405,31 @@ body {
 }
 
 /* footer */
+.page-footer > .container {
+  display: flex;
+  align-items: center;
+}
 .page-footer {
   background-color: var(--background-black);
 
   margin-left: auto;
   margin-right: auto;
 }
-/* Можно сделать display: flex */
+
 .footer-conteiner {
-  display: block;
+  display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
+  flex-direction: column;
 }
+.footer-conteiner + .footer-conteiner {
+  margin-left: 70px;
+}
+.second.footer-conteiner {
+  padding-top: 73px;
+  padding-bottom: 100px;
+}
+
 .logo-footer {
   display: inline-block;
   margin-bottom: 20px;
@@ -409,7 +440,11 @@ body {
   line-height: 1.17;
 }
 .footer-adress {
-  display: block;
+  display: inline-block;
+}
+.footer-conteiner > .features-title {
+  color: var(--white-color);
+  margin-bottom: 20px;
 }
 
 .logo-footer,
@@ -430,7 +465,7 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   letter-spacing: 0.03em;
-  line-height: 1.6; /*Поставил 1,6 т/к 1,7 точно сюда не влазит/Может есть другой способ - пожалуйста подскажите!!!*/
+  line-height: 1.6;
 }
 
 .text-footer {
@@ -445,6 +480,29 @@ body {
 .contacts-footer .link:not(:last-child) {
   margin-top: 0;
   margin-bottom: 9px;
+}
+.footer-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: currentColor;
+  color: var(--white-color);
+}
+.footer-link:focus,
+.footer-link:hover {
+  background-color: var(--accent-color);
+}
+
+.footer-icon {
+  width: 20px;
+  height: 20px;
+}
+.footer-item-icon + .footer-item-icon {
+  margin-left: 10px;
 }
 
 /* Страница портфолио */
