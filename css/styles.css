@@ -286,7 +286,7 @@ body {
 
 .team-list .profession {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 16px;
 
   font-size: 16px;
   line-height: 1.19;
@@ -301,7 +301,34 @@ body {
   height: 20px;
 }
 .team-link {
-  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--background-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: currentColor;
+  color: #afb1b8;
+}
+.team-link:hover {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+.team-icon-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+.team-item-icon + .team-item-icon {
+  margin-left: 10px;
+}
+.team-icon {
+  width: 20px;
+  height: 20px;
 }
 /* buttons */
 .button {
