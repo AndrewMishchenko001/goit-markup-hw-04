@@ -10,10 +10,9 @@
   --background-gray: #e5e5e5;
   --bordercard-grey: #eeeeee;
   --transparent-mail: rgba(255 255 255 0.6);
-  --gradient-color: #c4c4c4
-  
- --card-set-gep: 30px;
- 
+  --gradient-color: #c4c4c4;
+
+  --card-set-gep: 30px;
 }
 
 /* Cтили для Index.html */
@@ -157,7 +156,12 @@ body {
 .hero-section {
   background-color: var(--background-black);
 
-  background-image:linear-gradient(to right,rgba(47, 48, 58, .2) 0%,rgba(45, 45, 45, .4) 100%), url(/images/img_5.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4) 0%,
+      rgba(45, 45, 45, 0.6) 100%
+    ),
+    url(/images/img_5.jpg);
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
@@ -307,10 +311,11 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.team-icon {
+/* .team-icon {
   width: 20px;
-  height: 20px;
-}
+  height: 20px; */
+/* } */
+
 .team-link {
   width: 44px;
   height: 44px;
@@ -337,10 +342,6 @@ body {
 }
 .team-item-icon + .team-item-icon {
   margin-left: 10px;
-}
-.team-icon {
-  width: 20px;
-  height: 20px;
 }
 
 /* Clients */
@@ -384,6 +385,8 @@ body {
 .button:hover {
   color: var(--white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .hero-button {
@@ -497,10 +500,10 @@ body {
   background-color: var(--accent-color);
 }
 
-.footer-icon {
+/* .footer-icon {
   width: 20px;
   height: 20px;
-}
+} */
 .footer-item-icon + .footer-item-icon {
   margin-left: 10px;
 }
@@ -552,6 +555,7 @@ body {
 
 /* Можно сделать через width */
 .flex-element {
+  /* height: 404px; */
   flex-basis: calc(100% / 3 - 1 * var(--card-set-gep));
   margin-right: var(--card-set-gep);
   margin-bottom: var(--card-set-gep);
@@ -561,6 +565,11 @@ body {
 }
 .flex-element:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+.flex-element:focus,
+.flex-element:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .product-content {
