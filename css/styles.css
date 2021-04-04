@@ -161,7 +161,7 @@ body {
       rgba(47, 48, 58, 0.4) 0%,
       rgba(45, 45, 45, 0.6) 100%
     ),
-    url(/images/img_5.jpg);
+    url(../images/img_5.jpg);
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
